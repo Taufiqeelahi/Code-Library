@@ -1,18 +1,28 @@
-#include<bits/stdc++.h>
-#define endl '\n'
-#define FAST_IO ios_base::sync_with_stdio(0) ; cin.tie(0) ; cout.tie(0) ;
-typedef long long int ll ;
+// Optimize sieve works till 1e8 in less than 1 s 
+//Memory complexity O(n/64)
 
+#include<bits/stdc++.h>
 using namespace std ;
 
-int main()
-{
-    FAST_IO ;
-    auto time_complexity = clock() ;
-    ll t ; cin>>t ;
-    while(t--)
-    {
-       
-    } 
-    cerr<<1*0*(clock()-time_complexity)/CLOCKS_PER_SEC<<endl;  
+const int N = 1e8 + 9 ;
+bitset<N>f ;
+int main() {
+    ios_base::sync_with_stdio(0) ; 
+    cin.tie(0) ;
+    int n = N - 9 ;
+    vector<int>primes ;
+    f[1] = true ;
+    for(int i = 2 ; i*i <= n ;i++) {
+        if(!f[i]) {
+            for(int j = i*i ; j<= n ; j+= i) {
+                f[j] = true ;
+            }
+        }
+    }
+    for(int i = 2 ; i<= n ; i++) {
+        if(!f[i]) {
+            primes.push_back(i) ;
+        }
+    }
+    cout<<primes.size() ;
 }

@@ -1,4 +1,4 @@
-A signed number - x equals an unsigned number 2^n - 1
+A signed number - x equals an unsigned number 2^n - x
 ex: x = -43 in signed and x = 2^32 - 43 in unsigned
 
 In signed representation the next number after 2^(n-1) - 1  is -2^(n-1) .

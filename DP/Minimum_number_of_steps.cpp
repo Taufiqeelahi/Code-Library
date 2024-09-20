@@ -49,4 +49,6 @@ int32_t main() {
   cout << step[n] << '\n';
   return 0;
 }
+
+Here Iterative is better for 1e5 when i set n = 1e5 in recursive it is not giving answer but the iterative does gives the answer .
 */

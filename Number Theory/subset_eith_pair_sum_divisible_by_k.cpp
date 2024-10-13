@@ -18,6 +18,7 @@ int main(){
 		res += min(mp[i],mp[k-i]) ; // If a reminder is 1 and k-i = 4-1 = 3 (k=4) 
 		                            // so if we take the common of both then we will get the pair 
 		                            //which is devisible by k . Here we loop 0 to k/2 because if we don't there will be duplicate .
+									
 	}
 	cout<<res<<endl;
 

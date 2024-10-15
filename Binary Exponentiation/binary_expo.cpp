@@ -27,3 +27,17 @@ int main() {
     }
     cout<< ans << '\n' ;
 }
+
+/*
+long long bin_expo (long long x ,long long pow) {
+    x = x % mod ;
+    if(pow == 0) return 1 ;
+    else if(pow == 1) return x ;
+
+    long long p = bin_expo(x*x , pow / 2) ;
+    if(pow % 2) {
+        return p * x % mod ;
+    }
+    else return p ;
+} 
+*/

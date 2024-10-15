@@ -27,17 +27,23 @@ int main() {
     }
     cout<< ans << '\n' ;
 }
-
 /*
-long long bin_expo (long long x ,long long pow) {
-    x = x % mod ;
-    if(pow == 0) return 1 ;
-    else if(pow == 1) return x ;
-
-    long long p = bin_expo(x*x , pow / 2) ;
-    if(pow % 2) {
-        return p * x % mod ;
+long long binpow(long long a, long long b) {
+    if(b == 0) return 1; // Any number to the power of 0 is 1
+    a %= mod;            // Apply mod to base early to prevent overflow
+    
+    if(a == 0) return 0; // If base is 0, result is 0 for any non-zero power
+    
+    long long res = 1;   // This will store the result
+    
+    while (b > 0) {
+        if (b & 1)        // If b is odd (checking the least significant bit)
+            res = res * a % mod; // Multiply the result by a (mod mod)
+        a = a * a % mod;  // Square a (mod mod) to account for powers of 2
+        b >>= 1;          // Right shift b (equivalent to dividing by 2)
     }
-    else return p ;
-} 
+    
+    return res;
+}
+
 */

@@ -10,6 +10,7 @@ int  main() {
    long long  l = 0 ;
    long long  r = 1 ;
    while(!check(r))  r  *= 2 ;
+   
 
    long long  ans = 0 ;
    long long mid ;

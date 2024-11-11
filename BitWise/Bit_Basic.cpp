@@ -16,6 +16,7 @@ void print_on_bits(int x) {
   cout << '\n';
 }
 
+
 // Returns the count of set (1) bits in binary representation of x
 int count_on_bits(int x) {
   int ans = 0;

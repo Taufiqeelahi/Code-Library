@@ -16,6 +16,26 @@ int main() {
 
     long long ans = 1 ;
     while( pow > 0) {
+
+        // Case 1 : a == 1e18 
+
+        // base %= mod  If a == 1e18 
+        /*
+
+        // Case 2 : mod == 1e18 
+        If mod == 1e18 then -> 
+        let's say a = 1e9 and mod = 1e18 
+
+        then ( a * a ) % mod = ( 1e9 * 1e9 ) % 1e18  = 1e18 
+        then -> (a * a) = ( 1e18 * 1e9) = overflow
+        in this case we need to avoid ( a * a ) -> big number multiplication so we use binary multiplication
+        */
+
+
+        // Case 3 : power is 1e18 
+        /*
+        
+        */
         if(pow % 2 == 0) {
             base = base * base ;
             pow /= 2 ;
@@ -27,6 +47,10 @@ int main() {
     }
     cout<< ans << '\n' ;
 }
+
+/*
+Here , if a <= 1e18 then 
+*/
 /*
 long long binpow(long long a, long long b) {
     if(b == 0) return 1; // Any number to the power of 0 is 1

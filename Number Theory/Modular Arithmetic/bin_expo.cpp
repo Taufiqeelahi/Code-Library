@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std ;
-                     
+const int mod = 1e9 + 7 ;          
 int main() { 
     ios_base::sync_with_stdio(0) ; 
     cin.tie(0) ;  
@@ -34,40 +34,25 @@ int main() {
 
         // Case 3 : power is 1e18 
         /*
-        
+
         */
         if(pow % 2 == 0) {
-            base = base * base ;
+            base = (base * base) % mod ; // For case 2 : base = bin_multiply( base , base) ; 
             pow /= 2 ;
         }
         else {
-            ans = ans * base ;
+            ans = (ans * base ) % mod  ; // For case 2 : base = bin_multiply( ans , base) ; 
             pow-- ;
         }
+
+        /* 
+        ----- Same as the above code ----- 
+        if(pow & 1) {
+            ans = ( ans * base ) % mod ;
+        }
+        base = (base * base ) % mod ;
+        b >>= 1
+        */ 
     }
     cout<< ans << '\n' ;
 }
-
-/*
-Here , if a <= 1e18 then 
-*/
-/*
-long long binpow(long long a, long long b) {
-    if(b == 0) return 1; // Any number to the power of 0 is 1
-    a %= mod;            // Apply mod to base early to prevent overflow
-    
-    if(a == 0) return 0; // If base is 0, result is 0 for any non-zero power
-    
-    long long res = 1;   // This will store the result
-    
-    while (b > 0) {
-        if (b & 1)        // If b is odd (checking the least significant bit)
-            res = res * a % mod; // Multiply the result by a (mod mod)
-        a = a * a % mod;  // Square a (mod mod) to account for powers of 2
-        b >>= 1;          // Right shift b (equivalent to dividing by 2)
-    }
-    
-    return res;
-}
-
-*/

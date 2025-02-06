@@ -4,6 +4,7 @@ using namespace std ;
 const int M = 1e9 + 7 ;
 
 /*
+Large Exponentiation Using Euler :  When power is big 
  50^64^32 = ? 
 
  ETF(Euler totient function ) : N -> Count k such 1 <= k <= N ans k and n are co prime

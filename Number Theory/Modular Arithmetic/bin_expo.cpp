@@ -17,7 +17,7 @@ int main() {
     long long ans = 1 ;
     while( pow > 0) {
 
-        // Case 1 : a == 1e18 
+        // Case 1 : a == 1e18 // a is base 
 
         // base %= mod  If a == 1e18 
         /*
@@ -28,7 +28,7 @@ int main() {
 
         then ( a * a ) % mod = ( 1e9 * 1e9 ) % 1e18  = 1e18 
         then -> (a * a) = ( 1e18 * 1e9) = overflow
-        in this case we need to avoid ( a * a ) -> big number multiplication so we use binary multiplication
+        in this case we need to avoid ( a * a ) -> big number multiplication so we use large exponentiation using binary multiplication
         */
 
 

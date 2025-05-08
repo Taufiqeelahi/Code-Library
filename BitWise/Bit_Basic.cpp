@@ -105,3 +105,6 @@ int main() {
 
   return 0;
 }
+
+// A + B =  (A^B) + (2 (A&B))
+// A + B = (A|B) + (A&B)
